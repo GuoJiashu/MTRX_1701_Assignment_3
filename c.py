@@ -34,7 +34,7 @@ y_coords = [x[1] for x in trajectory]
 
 # Plot the trajectory
 plt.plot(x_coords, y_coords)
-plt.xlabel('x (m)')
-plt.ylabel('y (m)')
+plt.xlabel('x (cm)')
+plt.ylabel('y (cm)')
 plt.title('Vehicle Trajectory')
 plt.show()
