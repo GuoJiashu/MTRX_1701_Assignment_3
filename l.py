@@ -54,8 +54,8 @@ for i in range(n_steps):
 
 # Plot path
 plt.plot(x_history, y_history, 'b')
-plt.xlabel('x [cm]')
-plt.ylabel('y [cm]')
+plt.xlabel('x [m]')
+plt.ylabel('y [m]')
 plt.title('Robot Path')
 plt.axis('equal')
 plt.savefig('Robot Path.pdf')
