@@ -1,4 +1,5 @@
 import math
+import matplotlib.pyplot as plt
 
 
 def VehicleModel(xk, uk, dt, d=3):
@@ -14,9 +15,8 @@ def VehicleModel(xk, uk, dt, d=3):
     return [x_kp1, y_kp1, psi_kp1]
 
 
-import matplotlib.pyplot as plt
 
-# Set up initial state and control inputs
+# Give the initial values
 xk = [0, 0, 0]  # initial state (x, y, psi)
 vl = vr = 0.2805  # left and right wheel velocities (m/s)
 uk = [vl, vr]  # control inputs
@@ -34,7 +34,8 @@ y_coords = [x[1] for x in trajectory]
 
 # Plot the trajectory
 plt.plot(x_coords, y_coords)
-plt.xlabel('x (cm)')
-plt.ylabel('y (cm)')
+plt.xlabel('x (m)')
+plt.ylabel('y (m)')
 plt.title('Vehicle Trajectory')
 plt.show()
+plt.savefig('Vehicle Trajectory')
