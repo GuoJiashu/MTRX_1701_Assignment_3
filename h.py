@@ -2,7 +2,7 @@ import numpy as np
 
 
 def is_point_in_ellipse(x, y, a, b, x0, y0, thickness):
-    # Calculate distance from point (x,y) to center (x0,y0)
+    # Calculate distance from point (x,y) to center (x0,y0) This is the formula will be used in the following
     r = np.sqrt((x - x0) ** 2 + (y - y0) ** 2)
 
     # Calculate major and minor axis lengths of outer and inner ellipses
