@@ -7,13 +7,13 @@ def is_point_in_ellipse(x, y, a, b, x0, y0):
     return value
 
 
-# Define ellipse parameters
+# Ellipse parameters
 a = 12.5
 b = 7.5
 x0 = 0
 y0 = 7.5
 
-# Generate grid of points to evaluate
+# Generate grid
 x_vals = np.linspace(-20, 20, 500)
 y_vals = np.linspace(-3.5, 18.5, 500)
 X, Y = np.meshgrid(x_vals, y_vals)
