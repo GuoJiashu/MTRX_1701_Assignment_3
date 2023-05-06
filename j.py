@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 
 def SensorModel(xk, yk, psi_k, l, w):
@@ -18,7 +19,6 @@ l = 3
 w= 4
 slx, sly, srx, sry = SensorModel(xk, yk, psi_k, l, w)
 
-import numpy as np
 
 
 def TrackModel(slx, sly, srx, sry, a, b, x0, y0):
