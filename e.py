@@ -10,11 +10,12 @@ def SensorModel(xk, yk, psi_k, l, w):
     sry = yk + r * math.sin(psi_k - theta)
     return slx, sly, srx, sry
 
+# initial values
 xk = [0, 0, 0]
 psi_k = xk[2]
 yk = xk[1]
 xk = xk[0]
 l = 3
-w= 4
+w = 4
 slx, sly, srx, sry = SensorModel(xk, yk, psi_k, l, w)
 print(slx, sly, srx, sry)
