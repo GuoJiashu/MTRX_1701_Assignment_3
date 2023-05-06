@@ -1,4 +1,7 @@
 import math
+import matplotlib.pyplot as plt
+
+
 
 def VehicleModel(xk, uk, dt, d=3):
     vl = uk[0]
@@ -11,16 +14,15 @@ def VehicleModel(xk, uk, dt, d=3):
     psi_kp1 = psi_k + dt * psi_dot
     return [x_kp1, y_kp1, psi_kp1]
 
-import matplotlib.pyplot as plt
 
-# Set up initial state and control inputs
+# Initial Values
 xk = [0, 0, 0]  # initial state (x, y, psi)
-vl = 0.2805# left and right wheel velocities (m/s)
-vr = 0.14025
+vl = 0.2805 # left wheel velocities (m/s)
+vr = 0.14025 # let right side is half
 uk = [vl, vr]  # control inputs
 dt = 10  # time step (s)
 
-# Simulate vehicle motion for 100 seconds
+# Simulate vehicle motion for 10 seconds
 trajectory = [xk]
 for i in range(dt):
     xk = VehicleModel(xk, uk, dt)
@@ -36,3 +38,4 @@ plt.xlabel('x (m)')
 plt.ylabel('y (m)')
 plt.title('Vehicle Trajectory')
 plt.show()
+plt.savefig('Vehicle Trajectory')
