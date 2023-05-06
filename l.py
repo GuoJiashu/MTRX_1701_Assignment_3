@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from e import SensorModel
 from j import TrackModel
 from k import ControlModel
-from c import VehicleModel
 
 # ellipse parameters
 a = 12.5
